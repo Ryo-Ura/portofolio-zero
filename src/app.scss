@@ -12,6 +12,7 @@
         &::-webkit-scrollbar{
             display: none;      //for chrome, safari, etc
         }
+        scroll-behavior: smooth;
         
         > *{
             width: 100%;
