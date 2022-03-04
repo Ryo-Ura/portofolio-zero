@@ -1,9 +1,11 @@
 import PortofolioList from "../portofolioList/PortofolioList";
 import "./portofolio.scss"
 import { useEffect, useState } from "react";
+import { featuredPortofolio, webPortofolio, mobilePortofolio } from "../../data";
 
 export default function Portofolio() {
   const [selected, setSelected] = useState("featured")
+  const [data, setData] = useState([])
   const list = [
     {
       id: "featured",
@@ -19,6 +21,21 @@ export default function Portofolio() {
     },
   ];
 
+  useEffect(()=>{
+    switch (selected) {
+      case "featured":
+        setData(featuredPortofolio);
+        break;
+      case "web":
+        setData(webPortofolio);
+        break;
+      case "mobile":
+        setData(mobilePortofolio);
+        break;
+      default:
+        break;
+    }
+  }, [selected])
   return (
     <div className='portofolio' id="portofolio">
       <h1>Portofolio</h1>
@@ -28,30 +45,12 @@ export default function Portofolio() {
         ))}
       </ul>
       <div className="container">
-        <div className="item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/%D0%92%D1%96%D0%B4%D1%8C%D0%BE%D0%BC%D1%81%D1%8C%D0%BA%D1%96_%D0%BF%D0%BE%D1%80%D0%BE%D0%B3%D0%B8_%D0%BD%D0%B0_%D1%81%D0%B2%D1%96%D1%82%D0%B0%D0%BD%D0%BA%D1%83.jpg/1200px-%D0%92%D1%96%D0%B4%D1%8C%D0%BE%D0%BC%D1%81%D1%8C%D0%BA%D1%96_%D0%BF%D0%BE%D1%80%D0%BE%D0%B3%D0%B8_%D0%BD%D0%B0_%D1%81%D0%B2%D1%96%D1%82%D0%B0%D0%BD%D0%BA%D1%83.jpg" alt="Відьомські пороги на світанку.jpg"  />
-        <h3>Image</h3>
-        </div>
-        <div className="item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/%D0%92%D1%96%D0%B4%D1%8C%D0%BE%D0%BC%D1%81%D1%8C%D0%BA%D1%96_%D0%BF%D0%BE%D1%80%D0%BE%D0%B3%D0%B8_%D0%BD%D0%B0_%D1%81%D0%B2%D1%96%D1%82%D0%B0%D0%BD%D0%BA%D1%83.jpg/1200px-%D0%92%D1%96%D0%B4%D1%8C%D0%BE%D0%BC%D1%81%D1%8C%D0%BA%D1%96_%D0%BF%D0%BE%D1%80%D0%BE%D0%B3%D0%B8_%D0%BD%D0%B0_%D1%81%D0%B2%D1%96%D1%82%D0%B0%D0%BD%D0%BA%D1%83.jpg" alt="Відьомські пороги на світанку.jpg"  />
-        <h3>Image</h3>
-        </div>
-        <div className="item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/%D0%92%D1%96%D0%B4%D1%8C%D0%BE%D0%BC%D1%81%D1%8C%D0%BA%D1%96_%D0%BF%D0%BE%D1%80%D0%BE%D0%B3%D0%B8_%D0%BD%D0%B0_%D1%81%D0%B2%D1%96%D1%82%D0%B0%D0%BD%D0%BA%D1%83.jpg/1200px-%D0%92%D1%96%D0%B4%D1%8C%D0%BE%D0%BC%D1%81%D1%8C%D0%BA%D1%96_%D0%BF%D0%BE%D1%80%D0%BE%D0%B3%D0%B8_%D0%BD%D0%B0_%D1%81%D0%B2%D1%96%D1%82%D0%B0%D0%BD%D0%BA%D1%83.jpg" alt="Відьомські пороги на світанку.jpg"  />
-        <h3>Image</h3>
-        </div>
-        <div className="item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/%D0%92%D1%96%D0%B4%D1%8C%D0%BE%D0%BC%D1%81%D1%8C%D0%BA%D1%96_%D0%BF%D0%BE%D1%80%D0%BE%D0%B3%D0%B8_%D0%BD%D0%B0_%D1%81%D0%B2%D1%96%D1%82%D0%B0%D0%BD%D0%BA%D1%83.jpg/1200px-%D0%92%D1%96%D0%B4%D1%8C%D0%BE%D0%BC%D1%81%D1%8C%D0%BA%D1%96_%D0%BF%D0%BE%D1%80%D0%BE%D0%B3%D0%B8_%D0%BD%D0%B0_%D1%81%D0%B2%D1%96%D1%82%D0%B0%D0%BD%D0%BA%D1%83.jpg" alt="Відьомські пороги на світанку.jpg"  />
-        <h3>Image</h3>
-        </div>
-        <div className="item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/%D0%92%D1%96%D0%B4%D1%8C%D0%BE%D0%BC%D1%81%D1%8C%D0%BA%D1%96_%D0%BF%D0%BE%D1%80%D0%BE%D0%B3%D0%B8_%D0%BD%D0%B0_%D1%81%D0%B2%D1%96%D1%82%D0%B0%D0%BD%D0%BA%D1%83.jpg/1200px-%D0%92%D1%96%D0%B4%D1%8C%D0%BE%D0%BC%D1%81%D1%8C%D0%BA%D1%96_%D0%BF%D0%BE%D1%80%D0%BE%D0%B3%D0%B8_%D0%BD%D0%B0_%D1%81%D0%B2%D1%96%D1%82%D0%B0%D0%BD%D0%BA%D1%83.jpg" alt="Відьомські пороги на світанку.jpg"  />
-        <h3>Image</h3>
-        </div>
-        <div className="item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/%D0%92%D1%96%D0%B4%D1%8C%D0%BE%D0%BC%D1%81%D1%8C%D0%BA%D1%96_%D0%BF%D0%BE%D1%80%D0%BE%D0%B3%D0%B8_%D0%BD%D0%B0_%D1%81%D0%B2%D1%96%D1%82%D0%B0%D0%BD%D0%BA%D1%83.jpg/1200px-%D0%92%D1%96%D0%B4%D1%8C%D0%BE%D0%BC%D1%81%D1%8C%D0%BA%D1%96_%D0%BF%D0%BE%D1%80%D0%BE%D0%B3%D0%B8_%D0%BD%D0%B0_%D1%81%D0%B2%D1%96%D1%82%D0%B0%D0%BD%D0%BA%D1%83.jpg" alt="Відьомські пороги на світанку.jpg"  />
-        <h3>Image</h3>
-        </div>
+        {data.map(d=>(
+          <div className="item">
+              <img src = {d.img} alt="" />
+          <h3>{d.title}</h3>
+          </div>
+        ))}
       </div>
 
     </div>
