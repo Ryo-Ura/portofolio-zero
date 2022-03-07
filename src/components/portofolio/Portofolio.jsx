@@ -3,6 +3,7 @@ import "./portofolio.scss"
 import { useEffect, useState } from "react";
 import { featuredPortofolio, webPortofolio, mobilePortofolio } from "../../data";
 
+// TODO: when an image is clicked, move to its specific discription page (maybe pop-up window)
 export default function Portofolio() {
   const [selected, setSelected] = useState("featured")
   const [data, setData] = useState([])

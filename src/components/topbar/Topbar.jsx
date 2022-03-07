@@ -18,7 +18,9 @@ export default function Topbar({menuOpen, setMenuOpen}) {
                 </div>
                 <div className="itemContainer">
                     <GitHub className="icon"></GitHub>
-                    <span href="link">github.com</span>
+                    <a href="https://github.com/Ryo-Ura" className="clickable">
+                        <span href="link">github</span>
+                    </a>
 
                 </div>
             </div>

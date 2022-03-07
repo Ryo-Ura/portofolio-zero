@@ -1,8 +1,8 @@
 import Topbar from "./components/topbar/Topbar";
 import Portofolio from "./components/portofolio/Portofolio";
 import Intro from "./components/intro/Intro";
-import Works from "./components/works/Works";
-import Testimonials from "./components/testimonials/Testimonials";
+// import Works from "./components/works/Works";
+// import Testimonials from "./components/testimonials/Testimonials";
 import Contact from "./components/contact/Contact";
 import Menu from "./components/menu/Menu"; 
 import "./app.scss"
@@ -17,8 +17,8 @@ function App() {
       <div className="sections">
         <Intro></Intro>
         <Portofolio></Portofolio>
-        <Works></Works>
-        <Testimonials></Testimonials>
+        {/* <Works></Works>
+        <Testimonials></Testimonials> */}
         <Contact></Contact>
 
       </div>
