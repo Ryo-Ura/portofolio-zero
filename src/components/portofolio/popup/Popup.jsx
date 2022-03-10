@@ -1,23 +1,22 @@
 import React from 'react'
-
-function popup() {
+import "./popup.scss";
+export default function Popup() {
     return (
-        <div className='background'>
+        <div className='popup-background'>
             <div className='container'>
-                <button>X</button>
+                <span className='close'>X</span>
                 <div className='title'>
                     title
                 </div>
                 <div className='body'>
                     <p>
-                        body 
+                    The AADF is a direct implementation organization focused on the 
+                    development of a sustainable private sector economy and a democratic 
+                    society in Albania.
                     </p>
                 </div>
                 <div className='footer'></div>
             </div>
-
         </div>
     )
 }
-
-export default popup
