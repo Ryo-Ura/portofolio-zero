@@ -13,10 +13,10 @@
     justify-content: center;
     transition: all 1s ease;
     ul{
-        margin: 0;
+        
         padding: 0;
         list-style: none;
-        font-size: 40px;
+        font-size: 30px;
         font-weight: 300;
         width: 60%;
 
@@ -29,6 +29,17 @@
             &:hover{
                 font-weight:500;
                 color: aqua;
+            }
+        }
+        margin-bottom: 50px;
+    }
+    ul{
+        margin-top: 200px;
+        .contact{
+            font-size: 12px;
+            color: aliceblue;
+            .itemContainer{
+                padding: 8px 5px;
             }
         }
     }

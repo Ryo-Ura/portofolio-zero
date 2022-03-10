@@ -1,0 +1,13 @@
+.popup-background{
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    height: 300px;
+    width: 500px;
+    border: 1px solid green;
+    .container{
+        .close{
+            float: right;
+        }
+    }
+}

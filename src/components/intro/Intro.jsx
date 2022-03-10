@@ -7,7 +7,7 @@ export default function Intro() {
   useEffect(()=>{
     init(textRef.current,{
       showCursor: false,
-      strings: [' @babel/plugin-syntax-flow@^7.14.5', ' ypescript@>= 2.7', ' autoprefixer@^10.0.2'],
+      strings: [' '],
       backDelay: 1500,
       backSpeed: 40,
     });
@@ -17,23 +17,23 @@ export default function Intro() {
     <div className='intro' id="intro">
       <div className="left">
         <div className="imageContainer">
-          {/* <img src="assets/man.png" alt="" /> */}
+          <img src="assets/IMG_0792.png" alt="" className="image"/>
         </div>
       </div>
 
       <div className="right">
         
         <div className="wrapper">
-          <h2>This is</h2>
-          <h1>DEMO</h1>
-          <h3> student
+          <h2>3rd-year CS major at The University of British Columbia</h2>
+          
+          <h3> 
             <span ref={textRef}>
               
             </span></h3>
         </div>
-        <a href="#portofolio">
+        {/* <a href="#portofolio">
           <img src= "assets/down.png" alt="" />
-        </a>
+        </a> */}
       </div>
     </div>
   )

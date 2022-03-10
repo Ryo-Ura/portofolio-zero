@@ -2,6 +2,7 @@ import PortofolioList from "../portofolioList/PortofolioList";
 import "./portofolio.scss"
 import { useEffect, useState } from "react";
 import { featuredPortofolio, webPortofolio, mobilePortofolio } from "../../data";
+// import Popup from './popup/Popup';
 
 // TODO: when an image is clicked, move to its specific discription page (maybe pop-up window)
 export default function Portofolio() {
@@ -45,10 +46,11 @@ export default function Portofolio() {
           <PortofolioList title = {item.title} active = {selected === item.id} setSelected = {setSelected} id={item.id} />
         ))}
       </ul>
+      
       <div className="container">
       {data.map(d=>(
           <div className="item">
-            <img src = {d.img} alt="" />
+            <img src = {d.img} alt="" ></img>
             <h3>{d.title}</h3>
             <h5><a href={d.alt}>git repo</a></h5>
           </div>
