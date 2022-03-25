@@ -17,7 +17,7 @@ export const featuredPortofolio = [
     {
         id: 3,
         title: "File Sync",
-        img: "assets/FileSyncIcon.png",
+        img: "assets/fileSyncIcon.png",
         alt : "https://github.com/Ryo-Ura/DropBox-clone",
     },
     {
