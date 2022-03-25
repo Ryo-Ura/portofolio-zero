@@ -16,8 +16,8 @@ export const featuredPortofolio = [
     },
     {
         id: 3,
-        title: "currently working",
-        img: imageNotReady,
+        title: "File Sync",
+        img: "assets/FileSyncPic.png",
         alt : defaltAlt,
     },
     {
