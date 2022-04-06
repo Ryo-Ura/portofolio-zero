@@ -35,4 +35,4 @@
   </a>  
 </p>
 
-Further improvements: create back-end to store project datail infos, images, and contacts
+Further improvements: store project name, image, and link in back-end. get these using api calls. 
