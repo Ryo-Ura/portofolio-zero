@@ -2,12 +2,11 @@ import PortofolioList from "../portofolioList/PortofolioList";
 import "./portofolio.scss"
 import { useEffect, useState } from "react";
 import { featuredPortofolio, webPortofolio, mobilePortofolio } from "../../data";
-// import Popup from './popup/Popup';
 
 // TODO: when an image is clicked, move to its specific discription page (maybe pop-up window)
 export default function Portofolio() {
-  const [selected, setSelected] = useState("featured")
-  const [data, setData] = useState([])
+  const [selected, setSelected] = useState("featured");
+  const [data, setData] = useState([]);
   const list = [
     {
       id: "featured",
@@ -37,7 +36,8 @@ export default function Portofolio() {
       default:
         break;
     }
-  }, [selected])
+  }, [selected]);
+
   return (
     <div className='portofolio' id="portofolio">
       <h1>Portofolio</h1>
